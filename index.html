@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html>
+  <head>
+  <title>Button Example</title>
+  <script>
+    function checkAnswer(isCorrect) {
+      if (isCorrect) {
+        document.getElementById('message').innerHTML = 'Success!';
+      } else {
+        document.getElementById('message').innerHTML = 'Failed.';
+      }
+    }
+  </script>
+</head>
   <body>
+  <h1>Click the button:</h1>
+  <button onclick="checkAnswer(true)">Right</button>
+  <button onclick="checkAnswer(false)">Wrong</button>
+  <p id="message"></p>
     <h1 class="u">Welcome to the social quiz!</h1>
   </body>
 </html>
