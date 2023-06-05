@@ -15,9 +15,9 @@
   <body>
     <h1 class="u">Welcome to the social quiz!</h1>
     <h1 class="u">Is electronic time good for you?</h1>
-  <button class="u" onclick="checkAnswer(true)">Both</button>
-  <button class="u" onclick="checkAnswer(false)">Yes</button>
-    <button class="u" onclick="checkAnswer(false)">No</button>
+  <button class="b" onclick="checkAnswer(true)">Both</button>
+  <button class="b" onclick="checkAnswer(false)">Yes</button>
+    <button class="b" onclick="checkAnswer(false)">No</button>
   <p class="u" id="message"></p>
   </body>
 </html>
@@ -25,7 +25,13 @@
   .u {
     font-family: Verdana, Geneva, sans-serif;
     text-align: center;
-    align-items: center;
+  }
+  .b {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
   body {
   background-color: #80ffa2;
