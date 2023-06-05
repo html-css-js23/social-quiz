@@ -5,10 +5,12 @@
   <script>
     function checkAnswer1(isCorrect) {
       if (isCorrect) {
-        document.getElementById('message').innerHTML = 'Good!';
-        await delay(2000);
-        document.getElementById('1').style.visibility = 'hidden';
+        function delayedFunction1 {
+          document.getElementById('1').style.visibility = 'hidden';
         document.getElementById('message').style.visibility = 'hidden';
+        }
+        document.getElementById('message').innerHTML = 'Good!';
+        setTimeout(delayedFunction1, 2000);
       } else {
         document.getElementById('message').innerHTML = 'Wrong.';
       }
