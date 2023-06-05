@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
   <title>Button Example</title>
+  <style>
+    .u {
+      font-family: Verdana, Geneva, sans-serif;
+      text-align: center;
+    }
+    .b button {
+      margin: 10px;
+      padding: 10px 20px;
+    }
+    .b {
+      display: flex;
+      justify-content: center;
+    }
+    .w {
+      font-family: Verdana, Arial, sans-serif;
+    }
+    body {
+      background-color: #80ffa2;
+    }
+  </style>
   <script>
     function checkAnswer1(isCorrect) {
       if (isCorrect) {
-        function delayedFunction1 {
+        function delayedFunction1() {
           document.getElementById('1').style.visibility = 'hidden';
-        document.getElementById('message').style.visibility = 'hidden';
+          document.getElementById('message').style.visibility = 'hidden';
         }
         document.getElementById('message').innerHTML = 'Good!';
         setTimeout(delayedFunction1, 2000);
@@ -17,32 +37,12 @@
     }
   </script>
 </head>
-  <body>
-    <h1 class="u">Welcome to the social quiz!</h1>
-    <p class="w">1. Is electronic time good for you?</p>
-  <button class="b" id="1" onclick="checkAnswer1(true)">Both</button>
-  <button class="b" id="1" onclick="checkAnswer1(false)">Yes</button>
-    <button class="b" id="1" onclick="checkAnswer1(false)">No</button>
+<body>
+  <h1 class="u">Welcome to the social quiz!</h1>
+  <p class="w">1. Is electronic time good for you?</p>
+  <button class="b" onclick="checkAnswer1(true)">Both</button>
+  <button class="b" onclick="checkAnswer1(false)">Yes</button>
+  <button class="b" onclick="checkAnswer1(false)">No</button>
   <p class="u" id="message"></p>
-  </body>
+</body>
 </html>
-<style>
-  .u {
-    font-family: Verdana, Geneva, sans-serif;
-    text-align: center;
-  }
-  .b button {
-    margin: 10px;
-    padding: 10px 20px;
-  }
-  .b  {
-   display: flex;
-   justify-content: center;
-  }
-  .w {
-    font-family: Verdana, Arial, sans-serif;
-  }
-  body {
-  background-color: #80ffa2;
-  }
-</style>
