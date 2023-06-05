@@ -3,9 +3,12 @@
   <head>
   <title>Button Example</title>
   <script>
-    function checkAnswer(isCorrect) {
+    function checkAnswer1(isCorrect) {
       if (isCorrect) {
         document.getElementById('message').innerHTML = 'Good!';
+        await delay(2000);
+        document.getElementById('1').style.visibility = 'hidden';
+        document.getElementById('message').style.visibility = 'hidden';
       } else {
         document.getElementById('message').innerHTML = 'Wrong.';
       }
@@ -14,10 +17,10 @@
 </head>
   <body>
     <h1 class="u">Welcome to the social quiz!</h1>
-    <p>1. Is electronic time good for you?</p>
-  <button class="b" onclick="checkAnswer(true)">Both</button>
-  <button class="b" onclick="checkAnswer(false)">Yes</button>
-    <button class="b" onclick="checkAnswer(false)">No</button>
+    <p class="w">1. Is electronic time good for you?</p>
+  <button class="b" id="1" onclick="checkAnswer1(true)">Both</button>
+  <button class="b" id="1" onclick="checkAnswer1(false)">Yes</button>
+    <button class="b" id="1" onclick="checkAnswer1(false)">No</button>
   <p class="u" id="message"></p>
   </body>
 </html>
@@ -33,6 +36,9 @@
   .b  {
    display: flex;
    justify-content: center;
+  }
+  .w {
+    font-family: Verdana, Arial, sans-serif;
   }
   body {
   background-color: #80ffa2;
