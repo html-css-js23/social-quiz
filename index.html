@@ -24,19 +24,13 @@
     }
   </style>
   <script>
-    function checkAnswer1(isCorrect) {
+   var answers = 0;
+    function checkAnswer(isCorrect) {
       if (isCorrect) {
-        function delayedFunction1() {
-          document.getElementById('1').style.display = 'none';
-          document.getElementById('2').style.display = 'none';
-          document.getElementById('3').style.display = 'none';
-          document.getElementById('question1').style.display = 'none';
-         document.getElementById('message').innerHTML = '';
-        }
-        document.getElementById('message').innerHTML = 'Good!';
-        setTimeout(delayedFunction1, 2000);
+        answers = answers + 1;
+       console.log(answers);
       } else {
-        document.getElementById('message').innerHTML = 'Wrong.';
+          answers = answers - 0;
       }
     }
   </script>
@@ -44,9 +38,9 @@
 <body>
   <h1 class="u">Welcome to the social quiz!</h1>
   <p class="w" id="question1">1. Is electronic time good for you?</p>
-  <button class="b" id="1" onclick="checkAnswer1(true)">Both</button>
-  <button class="b" id="2" onclick="checkAnswer1(false)">Yes</button>
-  <button class="b" id="3" onclick="checkAnswer1(false)">No</button>
+  <button class="b" id="1" onclick="checkAnswer(true)">Both</button>
+  <button class="b" id="2" onclick="checkAnswer(false)">Yes</button>
+  <button class="b" id="3" onclick="checkAnswer(false)">No</button>
   <p class="u" id="message"></p>
 </body>
 </html>
