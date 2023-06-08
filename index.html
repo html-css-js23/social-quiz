@@ -29,7 +29,7 @@
     function checkAnswer(isCorrect) {
       if (isCorrect) {
         answers = answers + 1;
-       while (answer < 4) {
+       while (answer < 5) {
         document.getElementById(answer).style.visibility = 'hidden';
         answer = answer + 1;
         console.log(answer)
@@ -43,7 +43,7 @@
 </head>
 <body>
   <h1 class="u">Welcome to the social quiz!</h1>
-  <p class="w" id="question1">1. Is electronic time good for you?</p>
+  <p class="w" id="4">1. Is electronic time good for you?</p>
   <button class="b" id="1" onclick="checkAnswer(true)">Both</button>
   <button class="b" id="2" onclick="checkAnswer(false)">Yes</button>
   <button class="b" id="3" onclick="checkAnswer(false)">No</button>
