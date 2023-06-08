@@ -2,7 +2,7 @@
 <html>
  <link rel="icon" href="uwu2.png" type="image/png">
 <head>
-  <title>Button Example</title>
+  <title>Social Quiz</title>
   <style>
     .u {
       font-family: Verdana, Geneva, sans-serif;
@@ -25,9 +25,14 @@
   </style>
   <script>
    var answers = 0;
+   var answer = 1;
     function checkAnswer(isCorrect) {
       if (isCorrect) {
         answers = answers + 1;
+       while (answer < 3) {
+        answer = answer + 1;
+        document.getElementById(answer).style.visibility = 'hidden';
+       }
        console.log(answers);
       } else {
           answers = answers - 0;
